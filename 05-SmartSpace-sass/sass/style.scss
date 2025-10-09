@@ -1,0 +1,92 @@
+@use 'sass:math';
+
+$color-text: #31353B;
+$color-main: #FF9900;
+$color-accent: #F85A47;
+$color-heading: #000;
+$color-bg: #DBFFFF;
+
+$font-family-base: Helvetica, Arial, sans-serif;
+
+@mixin inner($mw: 1000px, $w: 88%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    color: $color-text;
+    font-size: 15px;
+    font-family: $font-family-base;
+    line-height: math.div(26, 15);
+    letter-spacing: #{math.div(20, 1000)}em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* common
+-------------------*/
+/* unit */
+.unit {
+    &__catch {
+        margin-bottom: 20px;
+        color: $color-main;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: math.div(30, 18);
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $color-heading;
+        font-size: 48px;
+        line-height: math.div(58, 48);
+    }
+
+    // 要素の中の一番最後の要素の下マージンを0にする
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* index.html
+-------------------*/
+/* spaces */
+.spaces {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-template-columns: 440fr 500fr;
+        column-gap: percentage(math.div(60, 1000));
+        align-items: center;
+    }
+}
+
+/* reviews */
+.reviews {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__info {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: percentage(math.div(60, 1000));
+    }
+}
+
+/* about.html
+-------------------*/
