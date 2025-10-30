@@ -14,11 +14,11 @@ $space-xxl: 2.5rem; // 40px
 $space-xxxl: 3rem; // 48px
 
 // --- Colors ---
-$color-text: #000;
-$color-base: #000;
-$color-main: #000;
-$color-accent: #000;
-$color-bg: #000;
+$color-text: #5A5A5A;
+$color-base: #2B2B2B;
+$color-main: #5A5A5A;
+$color-accent: #EDAA14;
+$color-bg: #ED145B;
 
 // --- Typography ---
 $font-size-base: 16;
@@ -73,7 +73,100 @@ $breakpoints: (
     margin-right: auto;
 }
 
-.header__inner {
-    background-color: #2B2B2B;
+body {
+    color: $color-text;
+}
+
+.header {
+    background-color: $color-base;
     color: #fff;
+}
+
+.header__inner {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include inner();
+}
+
+.gnav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.gnav__item a {
+    text-decoration: none;
+}
+
+.gnav__item--active a {
+    color: $color-bg;
+}
+
+//---main---//
+.about {
+
+    color: #fff;
+    background: url(../images/bg_mainvisual.png)no-repeat center center/cover;
+    padding: rem(140) 0;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__text {
+        text-align: center;
+        padding-top: $space-xxl;
+        padding-bottom: $space-l;
+    }
+
+    &__sub {
+        text-align: center;
+        padding-bottom: $space-xxxl;
+    }
+
+    &__btn {
+        display: block;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        background: $color-bg;
+        font-weight: bold;
+        width: 200px;
+        padding: rem(15);
+        font-size: rem(14);
+    }
+}
+
+h2 span {
+    color: $color-bg;
+}
+
+h2 {
+    text-align: center;
+    font-size: rem(46);
+    font-weight: bold;
+    //color: $color-text;
+}
+
+//---mainvisual---//
+.mainvisual {
+    @include inner();
+
+    &__title {
+        color: $color-base;
+        font-size: $space-xl;
+        padding-top: rem(120);
+        padding-bottom: $space-xxxl;
+        font-weight: bold;
+    }
+
+    &__main {
+        font-size: $space-m;
+        font-weight: bold;
+        padding-top: $space-l;
+        padding-bottom: rem(14);
+    }
 }
