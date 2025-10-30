@@ -21,6 +21,7 @@ body {
     font-family: $font-family-base;
     line-height: math.div(26, 15);
     letter-spacing: #{math.div(20, 1000)}em;
+    @include inner();
 }
 
 img {
@@ -31,6 +32,37 @@ img {
 
 /* common
 -------------------*/
+/*header*/
+.header {
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+/*gnav*/
+.header__inner {
+    font-size: 15px;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.gnav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.gnav__item a {
+    text-decoration: none;
+}
+
+.gnav__item--active a {
+    color: $color-main;
+}
+
 /* unit */
 .unit {
     &__catch {
@@ -52,6 +84,22 @@ img {
     :last-child {
         margin-bottom: 0;
     }
+
+    &__content {
+        padding-bottom: 60px;
+    }
+}
+
+.btn {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #F85A47;
+    color: #fff;
+    border-radius: 20px;
+    /*角丸のサイズ 25px/100px⬅️縦が25、縦が100*/
 }
 
 /* index.html
@@ -88,6 +136,40 @@ img {
     }
 }
 
+/*card*/
+.card {
+    padding: 45px 40px;
+    border: 1px solid#a3a3a3;
+    display: grid;
+}
+
+.card {
+    &__content {
+        font-size: 15px;
+        padding-bottom: 80px;
+        padding-top: 45px;
+    }
+}
+
+.reviews {
+    &__item {
+        border: 1px solid #A3A3A3;
+        display: inline-block;
+        width: 470px;
+        text-align: center;
+        padding: 15px;
+        border-radius: 20px;
+    }
+}
+
+/*customer*/
+.customer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: percentage(math.div(20, 390));
+    align-self: end;
+}
+
 /* about.html
 -------------------*/
-.about {}

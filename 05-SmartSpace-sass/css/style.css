@@ -1,9 +1,14 @@
+@charset "UTF-8";
 body {
   color: #31353B;
   font-size: 15px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.7333333333;
   letter-spacing: 0.02em;
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
@@ -14,6 +19,35 @@ img {
 
 /* common
 -------------------*/
+/*header*/
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*gnav*/
+.header__inner {
+  font-size: 15px;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.gnav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.gnav__item a {
+  text-decoration: none;
+}
+
+.gnav__item--active a {
+  color: #FF9900;
+}
+
 /* unit */
 .unit__catch {
   margin-bottom: 20px;
@@ -30,6 +64,21 @@ img {
 }
 .unit :last-child {
   margin-bottom: 0;
+}
+.unit__content {
+  padding-bottom: 60px;
+}
+
+.btn {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #F85A47;
+  color: #fff;
+  border-radius: 20px;
+  /*角丸のサイズ 25px/100px⬅️縦が25、縦が100*/
 }
 
 /* index.html
@@ -68,6 +117,38 @@ img {
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 6%;
        column-gap: 6%;
+}
+
+/*card*/
+.card {
+  padding: 45px 40px;
+  border: 1px solid #a3a3a3;
+  display: grid;
+}
+
+.card__content {
+  font-size: 15px;
+  padding-bottom: 80px;
+  padding-top: 45px;
+}
+
+.reviews__item {
+  border: 1px solid #A3A3A3;
+  display: inline-block;
+  width: 470px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+/*customer*/
+.customer {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  -moz-column-gap: 5.1282051282%;
+       column-gap: 5.1282051282%;
+  align-self: end;
 }
 
 /* about.html

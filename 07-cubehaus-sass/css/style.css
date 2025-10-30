@@ -1,0 +1,106 @@
+body {
+  color: #000;
+  font-size: 15px;
+  line-height: 1.7333333333;
+  letter-spacing: 0.02em;
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* common
+-------------------*/
+/*header*/
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*gnav*/
+.header__inner {
+  font-size: 15px;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.gnav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.gnav__item a {
+  text-decoration: none;
+}
+
+.gnav__item--active a {
+  color: #E40065;
+}
+
+/* philosophy */
+.philosophy__title {
+  font-size: 32px;
+  text-align: center;
+}
+.philosophy__title::before {
+  content: "PHILOSOPHY";
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1;
+  padding-top: 80px;
+}
+.philosophy__title::after {
+  content: "";
+  width: 100px;
+  border-bottom: 2px solid #E40065;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 25px;
+}
+
+/*consept*/
+.concept__text {
+  padding-top: 60px;
+  color: #2F2F2F;
+  padding-bottom: 40px;
+  width: 780px;
+  margin: 0 auto;
+  line-height: 34px;
+}
+.concept p + p {
+  margin-top: 60px;
+}
+
+/*house*/
+.house {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  margin-top: 60px;
+  padding-bottom: 120px;
+}
+.house__title {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 30px 0 20px 0;
+}
+
+/*people*/
+.voice__people {
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
