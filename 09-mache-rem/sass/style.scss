@@ -202,10 +202,14 @@ h2 {
 }
 
 //---footer---//
-footer {
+.footer {
+    background-color: #2B2B2B;
+
     &__text {
+        @include inner();
+        padding-top: 40px;
+        padding-bottom: 140px;
         font-size: 14px;
-        background-color: #2B2B2B;
         color: #fff;
     }
 }
