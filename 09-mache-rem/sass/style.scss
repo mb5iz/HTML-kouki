@@ -156,17 +156,18 @@ h2 {
     @include inner();
 
     &__flex {
-        display: block;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__title {
         font-size: 16px;
-        font-weight: bold;
-        text-decoration: underline;
-        text-decoration-color: #5A5A5A;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 14px;
+    }
+
+    &__left,
+    &__right {
+        width: 420px;
     }
 
     &__btn {
@@ -176,13 +177,14 @@ h2 {
         text-align: center;
         font-weight: bold;
         padding: 15px;
-        background-color: #EDAA14;
+        background-color: $color-accent;
         color: #fff;
         margin-bottom: 120px;
     }
 
     &__sub {
         font-size: 14px;
+        padding-bottom: 48px;
     }
 
     &__title {
@@ -194,16 +196,22 @@ h2 {
     }
 
     &__main {
+        color: $color-base;
         font-size: $space-m;
         font-weight: bold;
         padding-top: $space-l;
         padding-bottom: rem(14);
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-color: $color-main;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 14px;
     }
 }
 
 //---footer---//
 .footer {
-    background-color: #2B2B2B;
+    background-color: $color-base;
 
     &__text {
         @include inner();

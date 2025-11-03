@@ -82,17 +82,15 @@ h2 {
   margin-right: auto;
 }
 .mainvisual__flex {
-  display: block;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .mainvisual__title {
   font-size: 16px;
-  font-weight: bold;
-  text-decoration: underline;
-  -webkit-text-decoration-color: #5A5A5A;
-          text-decoration-color: #5A5A5A;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 14px;
+}
+.mainvisual__left, .mainvisual__right {
+  width: 420px;
 }
 .mainvisual__btn {
   font-size: 14px;
@@ -107,6 +105,7 @@ h2 {
 }
 .mainvisual__sub {
   font-size: 14px;
+  padding-bottom: 48px;
 }
 .mainvisual__title {
   color: #2B2B2B;
@@ -116,10 +115,17 @@ h2 {
   font-weight: bold;
 }
 .mainvisual__main {
+  color: #2B2B2B;
   font-size: 1rem;
   font-weight: bold;
   padding-top: 1.5rem;
   padding-bottom: 0.875rem;
+  font-weight: bold;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #5A5A5A;
+          text-decoration-color: #5A5A5A;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 14px;
 }
 
 .footer {
