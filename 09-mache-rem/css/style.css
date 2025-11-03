@@ -81,6 +81,33 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+.mainvisual__flex {
+  display: block;
+  display: flex;
+}
+.mainvisual__title {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #5A5A5A;
+          text-decoration-color: #5A5A5A;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 14px;
+}
+.mainvisual__btn {
+  font-size: 14px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #EDAA14;
+  color: #fff;
+  margin-bottom: 120px;
+}
+.mainvisual__sub {
+  font-size: 14px;
+}
 .mainvisual__title {
   color: #2B2B2B;
   font-size: 2rem;
@@ -93,5 +120,11 @@ h2 {
   font-weight: bold;
   padding-top: 1.5rem;
   padding-bottom: 0.875rem;
+}
+
+footer__text {
+  font-size: 14px;
+  background-color: #2B2B2B;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
